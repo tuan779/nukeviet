@@ -27,6 +27,7 @@ if ($_lang_multi == $_md5_lang_multi) {
     $array_config_global['rewrite_optional'] = 0;
     $array_config_global['rewrite_op_mod'] = '';
 
+    
     $sth = $db->prepare("UPDATE " . NV_CONFIG_GLOBALTABLE . " SET config_value = :config_value WHERE lang = 'sys' AND module = 'global' AND config_name = :config_name");
     foreach ($array_config_global as $config_name => $config_value) {
         $sth->bindParam(':config_name', $config_name, PDO::PARAM_STR, 30);

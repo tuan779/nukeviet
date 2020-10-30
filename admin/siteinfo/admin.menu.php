@@ -10,7 +10,7 @@
 
 if (!defined('NV_ADMIN')) {
     die('Stop!!!');
-}
+} 
 
 $allow_func = ['main', 'notification'];
 if (defined('NV_IS_GODADMIN')) {

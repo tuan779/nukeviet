@@ -31,7 +31,7 @@ if ($nv_Request->get_int('save', 'post') == '1') {
     if (empty($func_custom_name)) {
         $func_custom_name = ucfirst($row['func_name']);
     }
-
+ 
     $sth = $db->prepare('UPDATE ' . NV_MODFUNCS_TABLE . ' SET func_custom_name= :func_custom_name WHERE func_id=' . $id);
     $sth->bindParam(':func_custom_name', $func_custom_name, PDO::PARAM_STR);
     $sth->execute();
